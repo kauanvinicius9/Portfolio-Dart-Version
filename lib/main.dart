@@ -23,11 +23,10 @@ class Inicio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
+    return Scaffold(
       backgroundColor: const Color(0xFFF5F6FA),
       appBar: AppBar(
-        title: Text("Portfolio", style: TextStyle(color: Colors.white),
-        ),
+        title: Text("Portfolio", style: TextStyle(color: Colors.white)),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
@@ -38,11 +37,11 @@ class Inicio extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
+              Text("Texto de exemplo")
             ]
-          )
-      )
-    )
+          ),
+        ),
+      ),
+    );
   }
- }
-
+}
