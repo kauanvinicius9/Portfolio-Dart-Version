@@ -1,4 +1,6 @@
 // main.dart
+import 'package:avaliacao/projetos.dart';
+import 'package:avaliacao/contato.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +16,6 @@ class Portfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -27,20 +27,28 @@ class Portfolio extends StatelessWidget {
 
               child: Column(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(333),
-                    child: Image.asset(
-                      "/assets/image/foto.webp",
-                      width: 200,
-                      height: 200,
-                      fit: BoxFit.cover,
+                  SizedBox(height: 40),
+
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: const Color.fromARGB(255, 41, 117, 179), width: 3),
+                    ),
+
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(333),
+                      child: Image.asset(
+                        "../assets/images/foto.jpg",
+                        width: 200,
+                        height: 200,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
 
                   Text(
                     "Kauan Vinícius",
                     style: TextStyle(
-                      fontFamily: "Poppins",
                       fontSize: 26,
                       fontWeight: FontWeight.w600,
                     ),
@@ -49,7 +57,6 @@ class Portfolio extends StatelessWidget {
                   Text(
                     "Software - Data Science e Logística | Bosch",
                     style: TextStyle(
-                      fontFamily: "Poppins",
                       fontSize: 16,
                       color: Colors.grey[600],
                     ),
@@ -61,18 +68,37 @@ class Portfolio extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         _btn(
+                          context: context,
                           text: "Ver projetos",
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Projetos(),
+                              ),
+                            );
+                          },
                           color: const Color.fromARGB(255, 41, 117, 179),
                           textColor: Colors.white,
                         ),
+
                         SizedBox(width: 12),
+
                         _btn(
+                          context: context,
                           text: "Contato",
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Contato(),
+                              ),
+                            );
+                          },
                           color: Colors.white,
                           textColor: const Color.fromARGB(255, 41, 117, 179),
-                          border: true,
+                          border: true
+
                         ),
                       ],
                     ),
@@ -83,7 +109,6 @@ class Portfolio extends StatelessWidget {
                   Text(
                     "SOBRE",
                     style: TextStyle(
-                      fontFamily: "Poppins",
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -93,6 +118,11 @@ class Portfolio extends StatelessWidget {
                     padding: EdgeInsets.all(18),
                     child: Text(
                       "Meu nome é Kauan Vinícius, tenho 17 anos, nascido em Itapira no interior do estado de São Paulo e morando atualmente em Campinas. Atuo na empresa Robert Bosch como Jovem Aprendiz, cursando o terceiro semestre de Desenvolvimento de Sistemas no SENAI Roberto Mange e sou estudante do 3º ano da Escola Estadual Dom Barreto no período noturno.\n\nPrezo pelo desenvolvimento de código limpo, organização, planejamento e prototipação de projetos. Sou comunicativo, trabalho bem em equipe e possuo inglês intermediário, estudando atualmente na CPM (Cidadão Pro Mundo) em parceria com a Universidade Presbiteriana Mackenzie",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontSize: 15,
+                        height: 1.5
+                      )
                     ),
                   ),
 
@@ -101,7 +131,6 @@ class Portfolio extends StatelessWidget {
                   Text(
                     "FORMAÇÕES",
                     style: TextStyle(
-                      fontFamily: 'Poppins',
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
                     ),
@@ -154,6 +183,73 @@ class Portfolio extends StatelessWidget {
                     "Data Science Academy (DSA)",
                     "Duração: 216 horas • Presença: 95%",
                   ),
+
+                  SizedBox(height: 30),
+
+                  Text(
+                    "TECNOLOGIAS",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  SizedBox(height: 20),
+
+                  _card2(
+                    "HTML5"
+                  ),
+                  _card2(
+                    "CSS3"
+                  ),
+                  _card2(
+                    "TypeScript"
+                  ),
+                  _card2(
+                    "JavaScript"
+                  ),
+                  _card2(
+                    "React"
+                  ),
+                  _card2(
+                    "TailwindCSS"
+                  ),
+                  _card2(
+                    "Bootstrap"
+                  ),
+                  _card2(
+                    "Postman"
+                  ),
+                  _card2(
+                    "Vue JS"
+                  ),
+                  _card2(
+                    "Angular JS"
+                  ),
+                  _card2(
+                    "Flutter"
+                  ),
+                  _card2(
+                    "Python"
+                  ),
+                  _card2(
+                    "Django"
+                  ),
+                  _card2(
+                    "Java"
+                  ),
+                  _card2(
+                    "Figma"
+                  ),
+                  _card2(
+                    "Docker"
+                  ),
+                  _card2(
+                    "SQL"
+                  ),
+                  _card2(
+                    "FastAPI"
+                  ),
                 ],
               ),
             ),
@@ -165,6 +261,7 @@ class Portfolio extends StatelessWidget {
 
   // Molde de um botão personalizado
   Widget _btn({
+    required BuildContext context,
     required String text,
     required VoidCallback onTap,
     required Color color,
@@ -173,7 +270,17 @@ class Portfolio extends StatelessWidget {
   }) {
     return ElevatedButton(
       onPressed: onTap,
-      style: ElevatedButton.styleFrom(backgroundColor: color),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        elevation: 0,
+        foregroundColor: textColor,
+        side: border
+              ? BorderSide(color: textColor) 
+               : BorderSide.none,
+
+        ).copyWith(
+          elevation: WidgetStateProperty.all(0),
+        ),
       child: Text(text),
     );
   }
@@ -187,13 +294,19 @@ class Portfolio extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
-          BoxShadow(blurRadius: 6, color: Colors.black12, offset: Offset(0, 3)),
+          BoxShadow(
+            blurRadius: 6, 
+            color: Colors.black12, 
+            offset: Offset(0, 3)),
         ],
       ),
 
       child: Row(
         children: [
-          Icon(Icons.workspace_premium, color: Color(0xFFD89F20), size: 28),
+          Icon(
+            Icons.workspace_premium, 
+            color: Color(0xFFD89F20), 
+            size: 28),
 
           SizedBox(width: 12),
 
@@ -201,14 +314,30 @@ class Portfolio extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+
                 Text(
                   title,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                    fontSize: 16, 
+                    fontWeight: FontWeight.w600),
                 ),
 
-                Text(place, style: TextStyle(color: Colors.grey, fontSize: 12)),
+                Text(
+                  place, 
+                  style: 
+                  TextStyle(
+                    color: Colors.grey, 
+                    fontSize: 12
+                  )),
 
-                Text(info, style: TextStyle(color: Colors.grey, fontSize: 12)),
+                Text(
+                  info, 
+                  style: 
+                  TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12
+                  ) 
+                ),
               ],
             ),
           ),
@@ -216,4 +345,40 @@ class Portfolio extends StatelessWidget {
       ),
     );
   }
+}
+
+// Outro estilo de card componentizado
+Widget _card2(String title) {
+  return Container(
+    margin: EdgeInsets.only(bottom: 16),
+    padding: EdgeInsets.all(16),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: [
+        BoxShadow(
+          blurRadius: 6,
+          color: Colors.black12,
+          offset: Offset(0, 3)),
+      ],
+    ),
+
+    child: Row(
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
