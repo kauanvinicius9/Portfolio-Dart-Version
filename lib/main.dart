@@ -2,6 +2,7 @@
 import 'package:avaliacao/projetos.dart';
 import 'package:avaliacao/contato.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(
@@ -196,60 +197,14 @@ class Portfolio extends StatelessWidget {
 
                   SizedBox(height: 20),
 
-                  _card2(
-                    "HTML5"
-                  ),
-                  _card2(
-                    "CSS3"
-                  ),
-                  _card2(
-                    "TypeScript"
-                  ),
-                  _card2(
-                    "JavaScript"
-                  ),
-                  _card2(
-                    "React"
-                  ),
-                  _card2(
-                    "TailwindCSS"
-                  ),
-                  _card2(
-                    "Bootstrap"
-                  ),
-                  _card2(
-                    "Postman"
-                  ),
-                  _card2(
-                    "Vue JS"
-                  ),
-                  _card2(
-                    "Angular JS"
-                  ),
-                  _card2(
-                    "Flutter"
-                  ),
-                  _card2(
-                    "Python"
-                  ),
-                  _card2(
-                    "Django"
-                  ),
-                  _card2(
-                    "Java"
-                  ),
-                  _card2(
-                    "Figma"
-                  ),
-                  _card2(
-                    "Docker"
-                  ),
-                  _card2(
-                    "SQL"
-                  ),
-                  _card2(
-                    "FastAPI"
-                  ),
+                  Column(
+                    children: techs.map((tech) {
+                      return _card2(
+                        tech["name"]!,
+                        tech["icon"]!,
+                      );
+                    }).toList(),
+                  )
                 ],
               ),
             ),
@@ -347,8 +302,28 @@ class Portfolio extends StatelessWidget {
   }
 }
 
+final techs = [
+  {"name": "HTML5", "icon": "../assets/techs/HTML.svg"},
+  {"name": "CSS3", "icon": "../assets/techs/CSS.svg"},
+  {"name": "JavaScript", "icon": "../assets/techs/JavaScript.svg"},
+  {"name": "TypeScript", "icon": "../assets/techs/TypeScript.svg"},
+  {"name": "Django", "icon": "../assets/techs/Django.svg"},
+  {"name": "Docker", "icon": "../assets/techs/Docker.svg"},
+  {"name": "Flutter", "icon": "../assets/techs/Flutter-Dark.svg"},
+  {"name": "TailwindCSS", "icon": "../assets/techs/TailwindCSS-Dark.svg"},
+  {"name": "Python", "icon": "../assets/techs/Python-Dark.svg"},
+  {"name": "Postman", "icon": "../assets/techs/Postman.svg"},
+  {"name": "React", "icon": "../assets/techs/React-Dark.svg"},
+  {"name": "Vue JS", "icon": "../assets/techs/VueJS.svg"},
+  {"name": "Angular JS", "icon": "../assets/techs/Angular-Dark.svg"},
+  {"name": "Java", "icon": "../assets/techs/Java-Dark.svg"},
+  {"name": "Figma", "icon": "../assets/techs/Figma-Dark.svg"},
+  {"name": "MySQL", "icon": "../assets/techs/MySQL-Dark.svg"},
+  {"name": "FastAPI", "icon": "../assets/techs/FastAPI.svg"},
+];
+
 // Outro estilo de card componentizado
-Widget _card2(String title) {
+Widget _card2(String title, String imagePath) {
   return Container(
     margin: EdgeInsets.only(bottom: 16),
     padding: EdgeInsets.all(16),
@@ -365,6 +340,14 @@ Widget _card2(String title) {
 
     child: Row(
       children: [
+        SvgPicture.asset(
+          imagePath,
+          width: 28,
+          height: 28,
+        ),
+
+        SizedBox(width: 12),
+
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

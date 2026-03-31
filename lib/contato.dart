@@ -1,3 +1,4 @@
+// contato.dart
 import 'package:avaliacao/main.dart';
 import 'package:flutter/material.dart';
 
@@ -39,9 +40,20 @@ class Contato extends StatelessWidget {
                 SizedBox(height: 30),
 
                 TextField(
-                  keyboardType: TextInputType.datetime,
+                  keyboardType: TextInputType.name,
+                  style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     labelText: "Nome",
+                    labelStyle: TextStyle(color: Colors.grey),
+                    floatingLabelStyle: TextStyle(
+                      color: Color.fromARGB(255, 41, 117, 179)
+                    ),
+
+                    hintText: "Digite seu nome",
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
@@ -68,9 +80,20 @@ class Contato extends StatelessWidget {
                 SizedBox(height: 30),
 
                  TextField(
-                  keyboardType: TextInputType.datetime,
+                  keyboardType: TextInputType.emailAddress,
+                  style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     labelText: "E-mail",
+                    labelStyle: TextStyle(color: Colors.grey),
+                    floatingLabelStyle: TextStyle(
+                      color: Color.fromARGB(255, 41, 117, 179)
+                    ),
+
+                    hintText: "Digite seu e-mail",
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
@@ -97,12 +120,23 @@ class Contato extends StatelessWidget {
                 SizedBox(height: 30),
 
                  TextField(
-                  keyboardType: TextInputType.datetime,
+                  keyboardType: TextInputType.multiline,
                   minLines: 1,
                   maxLines: 6,
                   textAlignVertical: TextAlignVertical.top,
+                  style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     labelText: "Mensagem",
+                    labelStyle: TextStyle(color: Colors.grey),
+                    floatingLabelStyle: TextStyle(
+                      color: Color.fromARGB(255, 41, 117, 179)
+                    ),
+
+                    hintText: "Escreva sua mensagem",
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
@@ -133,11 +167,15 @@ class Contato extends StatelessWidget {
 
                 SizedBox(height: 30),
 
-                ElevatedButton(
+                // Botão responsivo
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 41, 117, 179),
+                    elevation: 0,
+                    shadowColor: Colors.transparent,
                     padding: EdgeInsets.symmetric(
-                      horizontal: 210,
                       vertical: 17,
                     ),
 
@@ -145,10 +183,11 @@ class Contato extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
-
+                  
                   onPressed: (){},
                   child: Text("Enviar", style: TextStyle(color: Colors.white))
-                ),
+                 ),
+                )
               ],
             ),
           ),
