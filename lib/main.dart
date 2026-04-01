@@ -314,7 +314,7 @@ final techs = [
   {"name": "Python", "icon": "../assets/techs/Python-Dark.svg"},
   {"name": "Postman", "icon": "../assets/techs/Postman.svg"},
   {"name": "React", "icon": "../assets/techs/React-Dark.svg"},
-  {"name": "Vue JS", "icon": "../assets/techs/VueJS.svg"},
+  {"name": "Vue JS", "icon": "../assets/techs/VueJS-Dark.svg"},
   {"name": "Angular JS", "icon": "../assets/techs/Angular-Dark.svg"},
   {"name": "Java", "icon": "../assets/techs/Java-Dark.svg"},
   {"name": "Figma", "icon": "../assets/techs/Figma-Dark.svg"},

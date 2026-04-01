@@ -184,8 +184,48 @@ class Contato extends StatelessWidget {
                     ),
                   ),
                   
-                  onPressed: (){},
-                  child: Text("Enviar", style: TextStyle(color: Colors.white))
+                  // Botão com PopUp falso
+                  onPressed: (){
+                    showDialog(
+                      context: context,
+                      builder: (dialogContext) {
+                        return AlertDialog(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+
+                          title: Row(
+                            children: [
+                              Icon(Icons.check_circle, color: Colors.green),
+                              SizedBox(width: 8),
+                              Text("Sucesso"),
+                            ],
+                          ),
+
+                          content: Text(
+                            "Seu e-mail foi enviado com sucesso",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: (){
+                                Navigator.pop(dialogContext);
+                              },
+                              child: Text(
+                                "OK",
+                                style: TextStyle(color: const Color.fromARGB(255, 41, 117, 179)),      
+                              ),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                   },
+                   child: Text(
+                    "Enviar",
+                    style: TextStyle(color: Colors.white)
+                   )
                  ),
                 )
               ],
