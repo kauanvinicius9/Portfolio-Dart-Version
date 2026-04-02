@@ -1,6 +1,7 @@
 // contato.dart
 import 'package:avaliacao/main.dart';
 import 'package:flutter/material.dart';
+import 'package:avaliacao/widgets/footer.dart';
 
 void main() {
   runApp(
@@ -227,7 +228,8 @@ class Contato extends StatelessWidget {
                     style: TextStyle(color: Colors.white)
                    )
                  ),
-                )
+                ),
+                Footer(),
               ],
             ),
           ),

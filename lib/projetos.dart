@@ -2,6 +2,7 @@
 import 'package:avaliacao/main.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:avaliacao/widgets/footer.dart';
 
 void main() {
   runApp(
@@ -75,6 +76,7 @@ class Projetos extends StatelessWidget {
                   "Conceitos básicos de FastAPI com HTML.",
                   "https://github.com/kauanvinicius9/FastAPI"
                 ),
+                Footer(),
               ],
             ),
           ),

@@ -1,6 +1,7 @@
 // main.dart
 import 'package:avaliacao/projetos.dart';
 import 'package:avaliacao/contato.dart';
+import 'package:avaliacao/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -204,7 +205,8 @@ class Portfolio extends StatelessWidget {
                         tech["icon"]!,
                       );
                     }).toList(),
-                  )
+                  ),
+                  Footer(),
                 ],
               ),
             ),
