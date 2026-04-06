@@ -322,6 +322,8 @@ final techs = [
   {"name": "Figma", "icon": "../assets/techs/Figma-Dark.svg"},
   {"name": "MySQL", "icon": "../assets/techs/MySQL-Dark.svg"},
   {"name": "FastAPI", "icon": "../assets/techs/FastAPI.svg"},
+  {"name": "Arduíno", "icon": "../assets/techs/Arduino.svg"}
+  
 ];
 
 // Outro estilo de card componentizado

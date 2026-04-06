@@ -76,6 +76,12 @@ class Projetos extends StatelessWidget {
                   "Conceitos básicos de FastAPI com HTML.",
                   "https://github.com/kauanvinicius9/FastAPI"
                 ),
+                _card3(
+                  context,
+                  "CrediTech",
+                  "Aplicativo de banco desenvolvido em Dart - Flutter.",
+                  "hhttps://github.com/kauanvinicius9/CrediTech.git"
+                ),
                 Footer(),
               ],
             ),
