@@ -1,4 +1,3 @@
-// main.dart
 import 'package:avaliacao/projetos.dart';
 import 'package:avaliacao/contato.dart';
 import 'package:avaliacao/widgets/footer.dart';

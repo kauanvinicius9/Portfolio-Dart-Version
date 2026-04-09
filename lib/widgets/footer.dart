@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 class Footer extends StatelessWidget {
   const Footer({super.key});
 
+  // Tratativa de erro na leitura de URL
   Future<void> _openLink(String url) async {
     final Uri uri = Uri.parse(url);
 
@@ -27,6 +28,7 @@ class Footer extends StatelessWidget {
         children: [
           IconButton(
             icon: FaIcon(FontAwesomeIcons.github),
+            color: const Color.fromARGB(255, 41, 117, 179),
             onPressed: () => _openLink("https://github.com/kauanvinicius9"),
           ),
 
@@ -34,6 +36,7 @@ class Footer extends StatelessWidget {
 
           IconButton(
             icon: FaIcon(FontAwesomeIcons.linkedin),
+            color: const Color.fromARGB(255, 41, 117, 179),
             onPressed: () => _openLink("https://www.linkedin.com/in/kauan-vin%C3%ADcius-953773359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"),
           ),
 
@@ -41,6 +44,7 @@ class Footer extends StatelessWidget {
 
           IconButton(
             icon: FaIcon(FontAwesomeIcons.instagram),
+            color: const Color.fromARGB(255, 41, 117, 179),
             onPressed: () => _openLink("https://www.instagram.com/kauanl01?igsh=MTA1czhyN3liM3l0NQ=="),
           ),
         ],
