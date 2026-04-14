@@ -81,6 +81,13 @@ class Projetos extends StatelessWidget {
                   "Aplicativo de banco desenvolvido em Dart - Flutter.",
                   "hhttps://github.com/kauanvinicius9/CrediTech.git"
                 ),
+                ),
+                _card3(
+                  context,
+                  "Tasks API",
+                  "API de tarefas em produção desenvolvido em Dart - Flutter.",
+                  "https://github.com/kauanvinicius9/API-Tasks-Dart.git"
+                ),
                 Footer(),
               ],
             ),
