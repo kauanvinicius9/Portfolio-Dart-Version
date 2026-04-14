@@ -184,6 +184,12 @@ class Portfolio extends StatelessWidget {
                     "Data Science Academy (DSA)",
                     "Duração: 216 horas • Presença: 95%",
                   ),
+                  ),
+                  _card(
+                    "Automação em KNIME",
+                    "Learner Dashboard | KNIME",
+                    "Duração: 32 horas • Presença: 100%",
+                  ),
 
                   SizedBox(height: 30),
 
