@@ -41,51 +41,32 @@ class Projetos extends StatelessWidget {
 
                 _card3(
                   context,
-                  "CRUD com Spring-Boot",
-                  "Um CRUD simples de usuários com Spring-Boot e Java.",
+                  "CRUD",
+                  "API de usuários com Spring-Boot e Java",
                   "https://github.com/kauanvinicius9/Spring-Boot"
                 ),
                 _card3(
                   context,
-                  "Livraria",
-                  "Livraria com autenticação via JWT e consumo de API.",
+                  "Livraria Digital",
+                  "Livraria com autenticação via JWT e consumo de API",
                   "https://github.com/kauanvinicius9/BookStore"
                 ),
                 _card3(
                   context,
                   "Cidade Inteligente",
-                  "Projeto Full-Stack com autenticação via JWT.",
+                  "Projeto Full-Stack com autenticação via JWT",
                   "https://github.com/kauanvinicius9/IP-SmartCity"
                 ),
                 _card3(
                   context,
-                  "Banco de Dados",
-                  "Um CRUD simples de usuários com Spring-Boot e Java.",
-                  "https://github.com/kauanvinicius9/Back-End"
+                  "Banco Digital Mobile",
+                  "Aplicativo de banco mobile",
+                  "https://github.com/kauanvinicius9/CrediTech.git"
                 ),
                 _card3(
                   context,
-                  "Comando de Voz",
-                  "Comando de voz do Google com Python puro.",
-                  "https://github.com/kauanvinicius9/Voice-Command"
-                ),
-                _card3(
-                  context,
-                  "FastAPI",
-                  "Conceitos básicos de FastAPI com HTML.",
-                  "https://github.com/kauanvinicius9/FastAPI"
-                ),
-                _card3(
-                  context,
-                  "CrediTech",
-                  "Aplicativo de banco desenvolvido em Dart - Flutter.",
-                  "hhttps://github.com/kauanvinicius9/CrediTech.git"
-                ),
-                ),
-                _card3(
-                  context,
-                  "Tasks API",
-                  "API de tarefas em produção desenvolvido em Dart - Flutter.",
+                  "API Mobile",
+                  "API de tarefas em produção",
                   "https://github.com/kauanvinicius9/API-Tasks-Dart.git"
                 ),
                 Footer(),
