@@ -48,7 +48,7 @@ class Portfolio extends StatelessWidget {
                   ),
 
                   Text(
-                    "Kauan Vinícius",
+                    "KAUAN VINÍCIUS",
                     style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.w600,
@@ -56,7 +56,7 @@ class Portfolio extends StatelessWidget {
                   ),
 
                   Text(
-                    "Software - Data Science e Logística | Bosch",
+                    "Sistemas Web e Dados Logísticos",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey[600],
@@ -150,11 +150,6 @@ class Portfolio extends StatelessWidget {
                     "Duração: 11 meses • Presença: 95%",
                   ),
                   _card(
-                    "Artística",
-                    "Fundação Eufraten",
-                    "Duração: 11 meses • Presença: 90%",
-                  ),
-                  _card(
                     "Programação para Hardware",
                     "SESI Santos Dumont",
                     "Duração: 5 anos • Presença: 100%",
@@ -170,26 +165,11 @@ class Portfolio extends StatelessWidget {
                     "Duração: 1 ano • Presença: 100%",
                   ),
                   _card(
-                    "Hackathon ETS 2026.1",
-                    "Robert Bosch LTDA",
-                    "Duração: 14 dias • Presença: 100%",
-                  ),
-                  _card(
-                    "Hackathon KNIME MA 2026.1",
-                    "Robert Bosch LTDA",
-                    "Duração: 7 dias • Presença: 100%",
-                  ),
-                  _card(
                     "Formação em Dados & IA",
                     "Data Science Academy (DSA)",
                     "Duração: 216 horas • Presença: 95%",
                   ),
-                  ),
-                  _card(
-                    "Automação em KNIME",
-                    "Learner Dashboard | KNIME",
-                    "Duração: 32 horas • Presença: 100%",
-                  ),
+                  )
 
                   SizedBox(height: 30),
 
@@ -321,14 +301,11 @@ final techs = [
   {"name": "Python", "icon": "../assets/techs/Python-Dark.svg"},
   {"name": "Postman", "icon": "../assets/techs/Postman.svg"},
   {"name": "React", "icon": "../assets/techs/React-Dark.svg"},
-  {"name": "Vue JS", "icon": "../assets/techs/VueJS-Dark.svg"},
   {"name": "Angular JS", "icon": "../assets/techs/Angular-Dark.svg"},
   {"name": "Java", "icon": "../assets/techs/Java-Dark.svg"},
   {"name": "Figma", "icon": "../assets/techs/Figma-Dark.svg"},
   {"name": "MySQL", "icon": "../assets/techs/MySQL-Dark.svg"},
   {"name": "FastAPI", "icon": "../assets/techs/FastAPI.svg"},
-  {"name": "Arduíno", "icon": "../assets/techs/Arduino.svg"}
-  
 ];
 
 // Outro estilo de card componentizado
