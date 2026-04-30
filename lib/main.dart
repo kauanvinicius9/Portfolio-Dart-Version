@@ -143,33 +143,44 @@ class Portfolio extends StatelessWidget {
                     "Desenvolvimento de Sistemas",
                     "SENAI Roberto Mange",
                     "Duração: 1 ano e 6 meses • Presença: 100%",
+                    "Modalidade: Presencial",
                   ),
                   _card(
                     "Fundamentos da Tecnologia",
                     "Fundação Eufraten",
                     "Duração: 11 meses • Presença: 95%",
+                    "Modalidade: Presencial",
                   ),
                   _card(
                     "Programação para Hardware",
                     "SESI Santos Dumont",
                     "Duração: 5 anos • Presença: 100%",
+                    "Modalidade: Presencial",
                   ),
                   _card(
                     "Língua Inglesa",
                     "Cidadão Pro Mundo",
                     "Duração: 5 anos • Presença: 100%",
+                    "Modalidade: Presencial",
                   ),
                   _card(
                     "Pacote Office",
                     "Fundação Bradesco",
                     "Duração: 1 ano • Presença: 100%",
+                    "Modalidade: EAD",
                   ),
                   _card(
                     "Formação em Dados & IA",
                     "Data Science Academy (DSA)",
                     "Duração: 216 horas • Presença: 95%",
-                  ),
-                  )
+                    "Modalidade: EAD",
+                   ),
+                  _card(
+                    "KNIME Analytics Plataform",
+                    "KNIME Learning Center",
+                    "Duração: 1 mês • Presença: 100%",
+                    "Modalidade: EAD",
+                   ),
 
                   SizedBox(height: 30),
 
@@ -228,7 +239,7 @@ class Portfolio extends StatelessWidget {
   }
 
   // Cards componentizados pra não ficar tão repetitivo
-  Widget _card(String title, String place, String info) {
+  Widget _card(String title, String place, String info, String modality) {
     return Container(
       margin: EdgeInsets.only(bottom: 16),
       padding: EdgeInsets.all(16),
@@ -274,6 +285,15 @@ class Portfolio extends StatelessWidget {
 
                 Text(
                   info, 
+                  style: 
+                  TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12
+                  ) 
+                ),
+
+                Text(
+                  modality, 
                   style: 
                   TextStyle(
                     color: Colors.grey,
